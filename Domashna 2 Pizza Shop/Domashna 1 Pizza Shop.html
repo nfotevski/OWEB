@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html> 
+    <head>
+        <meta charset="ufc-8">
+        <title>Pizza Shop</title>
+        <link rel="stylesheet" type="text/css" href="Pizza_Shop_Styles.css">
+    </head>
+
+    <body>
+        <table border="1">
+            <tr>
+                <th colspan="2">Pizza Shop 2.0</th>
+            </tr> 
+            <form>
+            <tr>
+                <td>First Name</td>
+                <td><input type="text" name="Name" id="Name"></td>
+            </tr>
+            <tr> 
+                <td>Pizza Topping</td>
+                <td><div><input type="radio" name="Pizza Topping">Supreme</div>
+                <div><input type="radio" name="Pizza Topping">Vegeterian</div>
+                <div><input type="radio" name="Pizza Topping">Hawaiian</div></td>
+            </tr>
+            <tr>
+                <td>Pizza Sauce</td>
+                <td>
+                   <select id="Pizza Sauce">
+                    <option value="Tomato" selected>Tomato</option>
+                    <option value="Pesto">Pesto</option>
+                    <option value="Beshamel">Beshamel</option>
+                    <option value="BBQ">BBQ</option>
+                   </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Optional Extras</td>
+                <td>
+                    <input type="checkbox" name="Extra Cheese">Extra Cheese
+                    <input type="checkbox" name="Gluten Free Base">Gluten Free Base
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">Delivery Instructions:<div><textarea></textarea></div></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="Submit" value="Send my Order">
+                    <input type="Reset" value="Clear">
+                </tfoot>
+            </tr>
+            </form>
+        </table>
+    </body>
+
+</html>
