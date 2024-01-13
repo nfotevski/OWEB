@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#myInput1").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).children("#Fnameid").text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+
+  $("#myInput2").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).children("#Lnameid").text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+
+  $("#myInput3").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).children("#Emailid").text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+
+});
+</script>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2>Filterable Table</h2>
+<p>Type something in the input field to search the table for first names, last names or emails:</p>  
+<div>
+<input id="myInput1" type="text" placeholder="Search FirstName...">
+<input id="myInput2" type="text" placeholder="Search Lastname...">
+<input id="myInput3" type="text" placeholder="Search Email...">
+</div>
+<br><br>
+
+<table>
+  <thead>
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Email</th>
+  </tr>
+  </thead>
+  <tbody id="myTable">
+  <tr>
+    <td id="Fnameid">John</td>
+    <td id="Lnameid">Doe</td>
+    <td id="Emailid">john@example.com</td>
+  </tr>                         
+  <tr>
+    <td id="Fnameid">Mary</td>
+    <td id="Lnameid">Moe</td>
+    <td id="Emailid">mary@mail.com</td>
+  </tr>
+  <tr>
+    <td id="Fnameid">July</td>
+    <td id="Lnameid">Dooley</td>
+    <td id="Emailid">july@greatstuff.com</td>
+  </tr>
+  <tr>
+    <td id="nameid">Anja</td>
+    <td id="Lnameid">Ravendale</td>
+    <td id="Emailid">a_r@test.com</td>
+  </tr>
+  </tbody>
+</table>
+  
+<p>Note that we start the search in tbody, to prevent filtering the table headers.</p>
+
+</body>
+</html>
